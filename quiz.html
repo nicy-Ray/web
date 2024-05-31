@@ -1,0 +1,99 @@
+<DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    quiz
+</title>
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<!-- <script src="quiz.js"></script> -->
+</head>
+
+
+
+
+<body>
+    <!-- navigation bar start-->
+<div class="nav">
+    <div class="wrap">
+        <ul class="intronav-left">
+            <li><img src="picture/gray_rabbit.png" alt = "rabbit" width="40" height="40" class="gray_rabbit"></li>
+            <li class="rabbit"><span>Navigation bar</span>
+        </ul>
+
+        <ul class="intronav-right">
+            <li><a href="introduction.html">Go to introduction</a><span>|</span></li>
+            
+            <li><a href="detail.html">Into interests detail</a></li>
+        </ul>
+        
+    </div> 
+</div> 
+<!-- navigation bar end -->
+
+
+
+
+
+    <!-- <div class="form1">
+    <form action="https://ivorystrange-engineanita-3000.codio-box.uk/">
+        <label for="form1">
+            1. My surname is ?
+        </label>
+    </form>
+    </div> -->
+
+<!-- question start -->
+
+
+
+
+<div class="container">
+    <div id="start-screen">
+        <h1>Welcome to Quiz! Give your name</h1>
+        <ul id="start-ul">
+        <li><input type="text" id="username"></li>
+        <li><button id="start-button">Start</button></li>
+        </ul>
+    </div>
+
+    <div id="quiz-screen" style="display: none;">
+        <div id="question-container">
+            <h1 id="question"></h1>
+            <div class="options">
+                <button class="option" data-value="0"></button>
+                <button class="option" data-value="1"></button>
+                <button class="option" data-value="2"></button>
+                <button class="option" data-value="3"></button>
+            </div>
+            <p id="feedback" style="display: none;"></p>
+            <p id="timer">Time to answer: <span id="time">30</span>s</p>
+            <button id="next-button" style="display: none;">Next Question</button>
+        </div>
+    </div>
+
+    <div id="result-screen" style="display: none;">
+        <h2>Quiz Over!</h2>
+        <p id="score"></p>
+        <h3>Leaderboard</h3>
+        <ul id="leaderboard"></ul>
+        <button id="restart-button">Restart</button>
+    </div>
+
+</div>
+
+
+
+<!-- question end -->
+
+
+
+
+
+
+
+<script src="quiz.js"></script>  
+</body>
+</html>

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* navigation bar start */
+.nav{
+    width: 100%;
+    height:60px;
+    line-height: 40px;
+    background-color: rgba(220, 220, 220, 0.7);
+    font-size: 13px;
+    position: fixed;
+    top: 0;
+    display: flex;
+}
+.nav .wrap{
+    width:1226px;
+    margin: 10px auto;
+}
+
+.nav .wrap .intronav-left {
+    float: left;
+}
+.nav .wrap .intronav-right {
+    float: right;
+}
+
+.nav .wrap li {
+    float: left;
+    list-style-type: none;
+}
+
+.nav .wrap li a {
+    text-decoration: none;
+}
+.nav .wrap li a:hover {
+    text-decoration: underline;
+}
+.nav .wrap .intronav-right li span {
+    margin: 0 3.6px;
+
+}
+
+.gray_rabbit {
+    margin-right: 10px;
+    border-radius: 20px;
+}
+/* navigation bar end */
+
+
+
+/* background image start*/
+body {
+    background-image: url('picture/inside_library.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white; 
+}
+
+/* background image end*/
+
+/* begin-text start*/
+.begin-text{
+    margin-top: 60;
+    text-align: center;
+}
+/* begin-text end*/
+
+/* all 3 sections start*/
+.part {
+    background-color: rgb(155, 231, 248,0.4);
+    width: 100%;
+}
+.part h3:hover {
+    color: rgba(247, 243, 8, 0.897);
+}
+.part p:hover {
+    color: rgba(247, 243, 8, 0.897);
+}
+
+/* AI flip book start*/
+.AI-flip-book .book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+}
+.book ul {
+    list-style: none;
+    width: 243px;
+    height: 350px;
+    transform-style: preserve-3d;
+    perspective: 900px;
+}
+
+ul:hover .page-1{
+    transform: rotateY(-180deg);
+    transition: 1.4s;
+    
+}
+ul:hover .page-2{
+    transform: rotateY(-180deg);
+    transition: 2s;
+    
+}
+
+.AI-flip-book .book img {
+    width: 243px;
+    height: 350px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+}
+.book li {
+    position: absolute;
+    transform-origin: left;
+    list-style-type: none;
+    /* backface-visibility: hidden; */
+}
+.page-1 {
+    transform: rotateY(-25deg);
+    transition: 2s;
+}
+.page-2 {
+    transform: rotateY(-23deg);
+    transition: 1.7s;
+}
+.page-3 {
+    transform: rotateY(-21deg);
+    transition: 1.4s;
+}
+/* AI flip book end*/
+
+
+/* t.s start*/
+.part .t.s-detail {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+.responsive-album-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+.responsive-album-card .album {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    max-width: 33.33%;
+}
+.responsive-album-card .album img {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+.responsive-album-card .album .description {
+    padding: 1.5rem 2rem;
+    box-shadow: 0, 8px, 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: relative;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s, 1s;
+}
+.responsive-album-card .album .description .des1 {
+    display: block;
+    font-size: 13px;
+    margin-bottom: .25rem;
+}
+.responsive-album-card .album .description h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: .75rem;
+}
+
+/* Naming animation in hover start*/
+.responsive-album-card .album:hover .description{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.responsive-album-card .album:hover {
+    animation: remove-overflow 2s forwards;
+}
+.responsive-album-card .album:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+.responsive-album-card .album:not(:hover) .description{
+    animation: remove-data 1s forwards;
+}
+/* Naming animation in hover end*/
+
+/* card aniation start*/
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+
+    }
+}
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);      
+    }
+    50%{
+        transform: translateY(-10rem);      
+    }
+    100%{
+        transform: translateY(.5rem);      
+    }
+}
+@keyframes show-overflow {
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+/* card animation end*/
+/* t.s end*/
+
+/* Animation rolling pictures start*/
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, .25);
+    border-radius: 0.5rem;
+}
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover
+}
+
+/* Animation rolling pictures end*/
+
+/* all 3 sections end*/
+
+
+/* footer start */
+footer {
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+/* footer end */

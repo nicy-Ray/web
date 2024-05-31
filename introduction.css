@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* navigation bar start */
+.nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:60px;
+    line-height: 40px;
+    background-color: rgba(220, 220, 220, 0.7);
+    font-size: 13px;
+    position: fixed;
+    top: 0;
+}
+.nav .wrap{
+    width:1226px;
+    margin: 10px auto;
+}
+
+.nav .wrap .intronav-left {
+    float: left;
+}
+.nav .wrap .intronav-right {
+    float: right;
+}
+
+.nav .wrap li {
+    float: left;
+    list-style-type: none;
+}
+.nav .wrap li a {
+    text-decoration: none;
+}
+
+.nav .wrap li a:hover {
+    text-decoration: underline;
+}
+.nav .wrap .intronav-right li span {
+    margin: 0 3.6px;
+
+}
+
+.gray_rabbit {
+    margin-right: 10px;
+    border-radius: 20px;
+}
+/* navigation bar end */
+
+
+/* background image start*/
+body {
+    background-image: url('picture/NY_library_front.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white; 
+}
+/* background image end*/
+
+/* css for overview (not cover by nav) start */
+.overview{
+    margin-top: 60;
+    text-align: center;
+}
+/* css for overview (not cover by nav) end */
+
+/* content of interests start */
+
+.interest li {
+    list-style-type: none;
+    position: relative;
+}
+/* hover effect start */
+h4:hover, p:hover {
+    color: skyblue;
+}
+.interest .sliding-door {
+    display: none;
+
+}
+.interest h4:hover + .sliding-door {
+    display: block;
+}
+/* hover effect end*/
+
+
+.moss {
+    
+}
+
+.equal-wid {
+    width: 33.33%;
+    background-color: rgba(255, 234, 113, 0.199);
+}
+
+.equal-wid img {
+    position: relative;
+    left: 15%;
+}
+/* content of interests end */
+
+
+/* footer start */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+/* footer end */
